@@ -13,28 +13,27 @@ public class Passage {
         System.out.println("<&> for person who is walking and - for distance between people.");
         //string of passage
         String peopleInPassage = scan.nextLine();
-        helloNum(peopleInPassage);
+        System.out.println(helloNum(peopleInPassage));
     }
 
     public static int helloNum(String peopleInPassage){
-        int PINLength = peopleInPassage.length();
-        char charPIN;
+        int PIPLength = peopleInPassage.length();
+        char charPIP;
         int bigger = 0;
-        int helloNumber;
-        for (int i = 0; i <= PINLength; i++){
-            charPIN = peopleInPassage.charAt(i);
-            if (charPIN == '>'){
+        int oneSideHello = 0;
+        int twoSideHello = 0;
+        for (int i = 0; i < PIPLength; i++){
+            charPIP = peopleInPassage.charAt(i);
+            if (charPIP == '>'){
                 bigger++;
             }
-            else if (charPIN == '<'){
-                if (bigger == 0){
-                    continue;
-                }
-                else{
-                   bigger++;
+            else if (charPIP == '<'){
+                if (bigger != 0){
+                    oneSideHello = oneSideHello + bigger;
                 }
             }
         }
-        return bigger++;
+        twoSideHello = oneSideHello * 2;
+        return twoSideHello;
     }
 }
