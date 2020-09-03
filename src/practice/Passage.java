@@ -17,23 +17,21 @@ public class Passage {
     }
 
     public static int helloNum(String peopleInPassage){
-        int PIPLength = peopleInPassage.length();
+        int pipLength = peopleInPassage.length();
         char charPIP;
         int bigger = 0;
         int oneSideHello = 0;
         int twoSideHello = 0;
-        for (int i = 0; i < PIPLength; i++){
+        for (int i = 0; i < pipLength; i++){
             charPIP = peopleInPassage.charAt(i);
             if (charPIP == '>'){
-                bigger++;
+                bigger += 2;
             }
             else if (charPIP == '<'){
-                if (bigger != 0){
-                    oneSideHello = oneSideHello + bigger;
-                }
+                oneSideHello = oneSideHello + bigger;
             }
         }
-        twoSideHello = oneSideHello * 2;
+        twoSideHello = oneSideHello;
         return twoSideHello;
     }
 }
