@@ -1,16 +1,16 @@
 package sesson12;
 
 public class Task {
-    private String name;
+    private String nameOfTask;
     private boolean isDone;
     private boolean isDeleted;
 
-    public String getName() {
-        return name;
+    public String getNameOfTask() {
+        return nameOfTask;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameOfTask(String nameOfTask) {
+        this.nameOfTask = nameOfTask;
     }
 
     public boolean isDone() {
