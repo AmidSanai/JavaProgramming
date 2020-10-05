@@ -2,8 +2,8 @@ package sesson12;
 
 public class Task {
     private String nameOfTask;
-    private boolean isDone;
-    private boolean isDeleted;
+    private boolean isDone = false;
+    private boolean isDeleted = false;
 
     public String getNameOfTask() {
         return nameOfTask;
