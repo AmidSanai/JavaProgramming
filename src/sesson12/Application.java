@@ -23,11 +23,12 @@ public class Application {
         do {
             System.out.println("Enter the number.");
             int number = scan.nextInt();
+            scan.nextLine();
             switch (number) {
                 case 1:
                     Task task = new Task();
                     System.out.println("Now enter your Task.");
-                    String desc = scan.next();
+                    String desc = scan.nextLine();
                     task.setNameOfTask(desc);
                     list.addTask(task);
                     System.out.println(list.tasks);
