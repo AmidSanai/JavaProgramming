@@ -47,7 +47,7 @@ public class ToDoList {
         return deletedTasks;
     }
 
-    public ArrayList<Task> getDeletedTask(){
+    public ArrayList<Task> getRecycleBin(){
         ArrayList<Task> recycleBin = new ArrayList<>();
         for (Task t : this.tasks) {
            if (t.isDeleted()){

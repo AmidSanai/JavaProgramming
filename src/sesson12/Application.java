@@ -12,15 +12,14 @@ public class Application {
         //the user is learning what to do :|
         System.out.println("1: for adding task");
         System.out.println("2 : for removing task");
-        System.out.println("3: for deleting task");
-        System.out.println("4: for check the task");
-        System.out.println("5 : to see all tasks");
-        System.out.println("6 : to see done task tasks");
-        System.out.println("7 : to see deleted tasks");
-        System.out.println("8 : for checking your recycleBin");
-        System.out.println("0: for exiting");
+        System.out.println("3: for check the task");
+        System.out.println("4 : to see all tasks");
+        System.out.println("5 : to see done tasks");
+        System.out.println("6 : for checking your recycleBin");
+        System.out.println("7 : for exiting");
         //the computer is asking for what to do
         System.out.println("----------------------------");
+        boolean x = true;
         do {
             System.out.println("Enter the number.");
             int number = scan.nextInt();
@@ -42,9 +41,28 @@ public class Application {
                     list.removeTask(numberOfRemovedTask);
                     System.out.println("REMOVING YOUR TASK...");
                     TimeUnit.SECONDS.sleep(1);
-                    System.out.println("TASK REMOVED");
+                    System.out.println("TASK REMOVED.");
                     break;
+                case 3:
+                    System.out.println("----------------------------");
+                    System.out.println("Enter the number of the done task.");
+                    System.out.println(list.getTasks());
+                    int numberOfDoneTask = scan.nextInt();
+                    list.isDone(numberOfDoneTask);
+                    System.out.println("TASK CHECKED.");
+                    break;
+                case 4:
+                    System.out.println(list.getTasks());
+                    break;
+                case 5:
+                    System.out.println(list.getDoneTasks());
+                    break;
+                case 6:
+                    System.out.println(list.getDeletedTasks());
+                    break;
+                case 7:
+                    x = false;
             }
-        } while (true);
+        } while (x);
     }
 }
