@@ -1,9 +1,10 @@
 package sesson12;
 
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class Application {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         //making Task and Scanner
         //making an object of to do list class
         ToDoList list =  new ToDoList();
@@ -23,20 +24,25 @@ public class Application {
         do {
             System.out.println("Enter the number.");
             int number = scan.nextInt();
+            scan.nextLine();
             switch (number) {
                 case 1:
                     Task task = new Task();
                     System.out.println("Now enter your Task.");
-                    String desc = scan.next();
+                    String desc = scan.nextLine();
                     task.setNameOfTask(desc);
                     list.addTask(task);
-                    System.out.println(list.tasks);
+                    System.out.println("[" + desc + "]");
                     break;
                 case 2:
                     System.out.println("----------------------------");
                     System.out.println("Enter the number of the Task");
+                    System.out.println(list.getTasks());
                     int numberOfRemovedTask = scan.nextInt();
                     list.removeTask(numberOfRemovedTask);
+                    System.out.println("REMOVING YOUR TASK...");
+                    TimeUnit.SECONDS.sleep(1);
+                    System.out.println("TASK REMOVED");
                     break;
             }
         } while (true);
