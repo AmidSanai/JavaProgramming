@@ -28,4 +28,13 @@ public class Task {
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
     }
+
+    @Override
+    public String toString() {
+        return "Task{" +
+                "nameOfTask='" + nameOfTask + '\'' +
+                ", isDone=" + isDone +
+                ", isDeleted=" + isDeleted +
+                '}';
+    }
 }
