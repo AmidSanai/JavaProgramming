@@ -1,7 +1,6 @@
 package sesson12;
 
 import java.util.Scanner;
-import java.util.concurrent.TimeUnit;
 
 public class Application {
     public static void main(String[] args) throws InterruptedException {
@@ -39,8 +38,6 @@ public class Application {
                     System.out.println(list.getTasks());
                     int numberOfRemovedTask = scan.nextInt();
                     list.removeTask(numberOfRemovedTask);
-                    System.out.println("REMOVING YOUR TASK...");
-                    TimeUnit.SECONDS.sleep(1);
                     System.out.println("TASK REMOVED.");
                     break;
                 case 3:
