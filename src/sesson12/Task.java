@@ -31,10 +31,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{" +
-                "nameOfTask='" + nameOfTask + '\'' +
-                ", isDone=" + isDone +
-                ", isDeleted=" + isDeleted +
-                '}';
+        return nameOfTask;
     }
 }

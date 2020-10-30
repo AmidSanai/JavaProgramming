@@ -35,6 +35,11 @@ public class Application {
                 case 2:
                     System.out.println("----------------------------");
                     System.out.println("Enter the number of the Task");
+                    int i = 1;
+                    for (Task t : list.getTasks()) {
+                        System.out.print(i++);
+                        System.out.println("-" + t.toString());
+                    }
                     System.out.println(list.getTasks());
                     int numberOfRemovedTask = scan.nextInt();
                     list.removeTask(numberOfRemovedTask);
@@ -43,13 +48,16 @@ public class Application {
                 case 3:
                     System.out.println("----------------------------");
                     System.out.println("Enter the number of the done task.");
-                    System.out.println(list.getTasks());
                     int numberOfDoneTask = scan.nextInt();
                     list.isDone(numberOfDoneTask);
                     System.out.println("TASK CHECKED.");
                     break;
                 case 4:
-                    System.out.println(list.getTasks());
+                    int ii = 1;
+                    for (Task t : list.getTasks()) {
+                        System.out.print(ii++);
+                        System.out.println("-" + t.toString());
+                    }
                     break;
                 case 5:
                     System.out.println(list.getDoneTasks());
