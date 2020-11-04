@@ -16,10 +16,11 @@ public class PracticeOfArrayList {
         //Print them out
         int i = 1;
         int i1 = 0;
-        for (String c : colors) {
+        do {
             System.out.print(i++);
             System.out.print("-");
             System.out.println(colors.get(i1++));
-        }
+        }while (i <= colors.size());
+
     }
 }
