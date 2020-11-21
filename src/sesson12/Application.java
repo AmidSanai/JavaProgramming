@@ -42,7 +42,8 @@ public class Application {
                     }
                     System.out.println(list.getTasks());
                     int numberOfRemovedTask = scan.nextInt();
-                    list.removeTask(numberOfRemovedTask);
+                    int numberOfRemovedTaskMinesOne = numberOfRemovedTask - 1;
+                    list.removeTask(numberOfRemovedTaskMinesOne);
                     System.out.println("TASK REMOVED.");
                     break;
                 case 3:
